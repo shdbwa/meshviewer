@@ -64,6 +64,19 @@ function loadFromArguments()
     }
 }
 
+
+/**
+ * Render files passed by arguments (CLI)
+ */
+
+function renderFromArguments()
+{
+    let args = remote.getGlobal("arguments");
+    if(args.length > 1){
+        loadFile(args[1]);
+    }
+}
+
 /**
  * Verify and load supported 3D file
  * @param {string} file File path
